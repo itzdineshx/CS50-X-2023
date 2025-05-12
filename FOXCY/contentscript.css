@@ -1,0 +1,133 @@
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(to right, #2E3B4E, #16222A);
+    color: #fff;
+    animation: gradientAnimation 5s infinite alternate;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+.STAYPtopItem {
+    text-align: center;
+    color: #16222A;
+    background: linear-gradient(to right, #F4F4F4, #ECECEC);
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    animation: fadeInDown 1s ease-in-out;
+}
+
+.STAYPtopItem h1 {
+    margin: 0;
+    font-size: 36px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.STAYPtopItemMain {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.STAYPInfo {
+    text-align: center;
+    animation: fadeInLeft 1s ease-in-out;
+}
+
+.STAYPInfo > p {
+    color: #9CA4AB;
+    font-size: 16px;
+    margin: 0;
+    line-height: 1.5;
+}
+
+.STAYPInfo > h4 {
+    color: #16222A;
+    font-size: 24px;
+    margin: 0;
+}
+
+.STAYPbottomItem {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.STAYPbottomItem button {
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.STAYPbottomItem button:hover {
+    background-color: #2980b9;
+}
+
+.STAYPtimeCont {
+    text-align: center;
+    padding: 15px;
+    background-color: #16222A;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.STAYPtimeCont > p {
+    color: #9CA4AB;
+    font-size: 18px;
+    margin: 0;
+}
+
+.STAYPtime {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.STAYPnumber {
+    font-size: 48px;
+    color: #fff;
+    margin: 0 5px;
+    animation: countdownPulse 1s infinite alternate;
+}
+
+@keyframes countdownPulse {
+    0% {
+        transform: scale(1);
+        color: #fff;
+    }
+    50% {
+        transform: scale(1.1);
+        color: #3498db;
+    }
+    100% {
+        transform: scale(1);
+        color: #fff;
+    }
+}

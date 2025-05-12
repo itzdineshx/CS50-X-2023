@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap">
+    <title>Stay Productive</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to right, #4b6cb7, #182848);
+            color: #fff;
+            animation: fadeIn 0.8s ease-in-out;
+            animation: gradientAnimation 5s infinite alternate;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes gradientAnimation {
+            0% {
+                background-position: 0% 50%;
+            }
+            100% {
+                background-position: 100% 50%;
+            }
+        }
+
+        .container {
+            width: 400px;
+            max-height: 275px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background: #fff;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
+            border-radius: 12px;
+            overflow: hidden;
+            margin: 20px auto;
+        }
+
+        .topItem {
+            height: 65%;
+            text-align: center;
+            color: #182848;
+            background: linear-gradient(to right, #fcfcfc, #f9f9f9);
+            border-radius: 12px 12px 0 0;
+            position: relative;
+            overflow: hidden;
+            padding: 30px;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 28px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            animation: slideInDown 1s ease-in-out;
+        }
+
+        .topItemMain {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 20px;
+            animation: fadeInDown 1s ease-in-out;
+        }
+
+        .Info {
+            text-align: left;
+            position: relative;
+            animation: fadeInLeft 1s ease-in-out;
+        }
+
+        @keyframes fadeInLeft {
+            0% {
+                opacity: 0;
+                transform: translateX(-20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .Info>p {
+            color: #000000;
+            font-size: 14px;
+            margin: 0;
+            line-height: 1.5;
+            animation: fadeInLeft 1s ease-in-out;
+        }
+
+        .Info>h4 {
+            color: #182848;
+            font-size: 18px;
+            margin: 0;
+            animation: fadeInLeft 1s ease-in-out;
+        }
+
+        #btn {
+        color: #fff;
+        font-weight: bold;
+        font-size: 16px;
+        padding: 12px 24px;
+        background-color: #182848;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        border-radius: 8px;
+        transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+        animation: fadeInUp 1s ease-in-out;
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        }
+
+
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+
+        @keyframes fadeInDown {
+            0% {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        #btn:hover {
+            background-color: #4b6cb7;
+            transform: scale(1.05);
+        }
+
+        #btn:active {
+            background-color: #0d2b5a;
+        }
+
+        .bottomItem {
+            height: 35%;
+            position: relative;
+            background: radial-gradient(circle, #4b6cb7 30%, #182848);
+            text-align: center;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 0 0 12px 12px;
+            overflow: hidden;
+            padding: 30px;
+            position: relative;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        .decorativeLine {
+            height: 2px;
+            width: 50%;
+            background-color: #fcfcfc;
+            margin: 20px auto;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        .Error {
+            padding-top: 5px;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        .Error>p {
+            margin: 0;
+            font-size: 14px;
+            font-weight: bold;
+            background: #f1f3f5;
+            padding: 8px 0;
+            text-align: center;
+            animation: fadeIn 1s ease-in-out;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="topItem">
+            <img src="icon48.png" alt="Logo" class="logo">
+            <h1>Stay productive</h1>
+            <div class="decorativeLine"></div>
+            <div class="topItemMain">
+                <div class="Info">
+                    <p>You are currently on :</p>
+                    <h4 id="url"></h4>
+                </div>
+                <button id="btn">BLOCK THIS URL</button>
+            </div>
+        </div>
+        <div class="bottomItem"></div>
+    </div>
+</body>
+<script src="popup.js"></script>
+</html>
